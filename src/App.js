@@ -184,8 +184,8 @@ const getRate = (dev1, dev2) => {
   } else {
     const rate1 = rates[dev1];
     const rate2 = rates[dev2];
-    console.log("rate " + dev1 + " : " + rate1);
-    console.log("rate " + dev2 + " : " + rate2);
+    // console.log("rate " + dev1 + " : " + rate1);
+    // console.log("rate " + dev2 + " : " + rate2);
     return rate2 / rate1;
   }
 };
@@ -197,15 +197,14 @@ function App() {
   const [targetDevise, setTargetDevise] = useState("USD");
   const [trigger, setTrigger] = useState(1);
 
-  console.log("pivotValue : " + pivotValue);
-  console.log("pivotDevise : " + pivotDevise);
-  console.log("targetValue : " + targetValue);
-  console.log("targetDevise : " + targetDevise);
-  console.log("trigger : " + trigger);
+  // console.log("pivotValue : " + pivotValue);
+  // console.log("pivotDevise : " + pivotDevise);
+  // console.log("targetValue : " + targetValue);
+  // console.log("targetDevise : " + targetDevise);
+  // console.log("trigger : " + trigger);
 
   const convertDevise = trg => {
     const rate1 = getRate(pivotDevise, targetDevise);
-    console.log(rate1);
     if (trg === 1 || trg === 2) {
       setTargetValue(Math.round(pivotValue * rate1 * 100) / 100);
       setTrigger(0);
@@ -238,7 +237,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        {pivotDevise} To {targetDevise}
+        Conversion {pivotDevise} vers {targetDevise}
       </h1>
 
       <DeviseBar
