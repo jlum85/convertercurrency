@@ -7,7 +7,7 @@ const DeviseBar = props => {
     <div className="deviseBar">
       <input
         placeholder=""
-        type="text"
+        type="number"
         name="currency"
         value={props.value}
         onChange={props.valueChange}

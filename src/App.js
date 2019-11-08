@@ -237,7 +237,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        Conversion {pivotDevise} vers {targetDevise}
+        💵Conversion {pivotDevise} vers {targetDevise} 💵
       </h1>
 
       <DeviseBar
